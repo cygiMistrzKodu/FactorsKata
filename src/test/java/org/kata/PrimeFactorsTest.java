@@ -16,6 +16,7 @@ public class PrimeFactorsTest {
 
         assertThat(factorsOf(1), is(empty()));
         assertThat(factorsOf(2),contains(2));
+        assertThat(factorsOf(3),contains(3));
 
 
     }
@@ -24,7 +25,7 @@ public class PrimeFactorsTest {
 
         ArrayList<Integer> factors = new ArrayList<>();
         if (n > 1){
-            factors.add(2);
+            factors.add(n);
         }
         return factors;
     }
