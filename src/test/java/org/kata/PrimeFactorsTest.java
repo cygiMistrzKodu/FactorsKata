@@ -22,6 +22,7 @@ public class PrimeFactorsTest {
         assertThat(factorsOf(6), contains(2,3));
         assertThat(factorsOf(7), contains(7));
         assertThat(factorsOf(8), contains(2,2,2));
+        assertThat(factorsOf(9), contains(3,3));
 
 
     }
@@ -34,6 +35,10 @@ public class PrimeFactorsTest {
                 factors.add(2);
                 n /= 2;
 
+            }
+            while (n % 3 == 0) {
+                factors.add(3);
+                n /= 3;
             }
         }
         if (n > 1) {
