@@ -15,12 +15,18 @@ public class PrimeFactorsTest {
     public void factors() {
 
         assertThat(factorsOf(1), is(empty()));
+        assertThat(factorsOf(2),contains(2));
 
 
     }
 
-    private List<String> factorsOf(int n) {
-        return new ArrayList<>();
+    private List<Integer> factorsOf(int n) {
+
+        ArrayList<Integer> factors = new ArrayList<>();
+        if (n > 1){
+            factors.add(2);
+        }
+        return factors;
     }
 
 }
