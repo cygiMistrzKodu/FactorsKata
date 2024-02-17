@@ -21,6 +21,7 @@ public class PrimeFactorsTest {
         assertThat(factorsOf(5), contains(5));
         assertThat(factorsOf(6), contains(2,3));
         assertThat(factorsOf(7), contains(7));
+        assertThat(factorsOf(8), contains(2,2,2));
 
 
     }
@@ -29,7 +30,7 @@ public class PrimeFactorsTest {
 
         ArrayList<Integer> factors = new ArrayList<>();
         if (n > 1) {
-            if (n % 2 == 0) {
+            while (n % 2 == 0) {
                 factors.add(2);
                 n /= 2;
 
