@@ -19,10 +19,10 @@ public class PrimeFactorsTest {
         assertThat(factorsOf(3), contains(3));
         assertThat(factorsOf(4), contains(2, 2));
         assertThat(factorsOf(5), contains(5));
-        assertThat(factorsOf(6), contains(2,3));
+        assertThat(factorsOf(6), contains(2, 3));
         assertThat(factorsOf(7), contains(7));
-        assertThat(factorsOf(8), contains(2,2,2));
-        assertThat(factorsOf(9), contains(3,3));
+        assertThat(factorsOf(8), contains(2, 2, 2));
+        assertThat(factorsOf(9), contains(3, 3));
 
 
     }
@@ -37,12 +37,8 @@ public class PrimeFactorsTest {
                 n /= divisor;
 
             }
-           divisor++;
+            divisor++;
         }
-        if (n > 1) {
-            factors.add(n);
-        }
-
 
         return factors;
     }
